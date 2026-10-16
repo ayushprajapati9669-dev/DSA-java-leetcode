@@ -49,8 +49,8 @@ Example 3:
 ## Solution
 
 - **Language**: Java
-- **Runtime**: 1 ms
-- **Memory**: 42.5 MB
+- **Runtime**: 0 ms
+- **Memory**: 41.9 MB
 
 ---
 
