@@ -40,7 +40,7 @@ class Solution {
         return head;*/
         
         // approach--->2 
-        if(head==null || left==right){
+      /*  if(head==null || left==right){
             return head;
         }
         ListNode before=null;
@@ -63,6 +63,20 @@ class Solution {
             head=prev;
         }
         temp.next=curr;
+        return head;*/
+        ListNode dummy=new ListNode(-1);
+        dummy.next=head;
+        ListNode prev=dummy;
+        for(int i=1;i<left;i++){
+            prev=prev.next;
+        }
+        ListNode curr=prev.next;
+        for(int i=0;i<right-left;i++){
+            ListNode Next=curr.next;
+            curr.next=Next.next;
+            Next.next=prev.next;
+            prev.next=Next;
+        }
         return head;
     }
 }
