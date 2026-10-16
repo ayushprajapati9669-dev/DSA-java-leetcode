@@ -13,10 +13,10 @@ class Solution {
         if(head==null ){
         return null;
         }
-         int length=0;
-    ListNode curr=head;
-    while(curr!=null){
-        curr=curr.next;
+         int length=1;
+    ListNode tail=head;
+    while(tail.next!=null){
+        tail=tail.next;
         length++;
     }
     
@@ -25,18 +25,13 @@ class Solution {
             return head;
         }
    
-    curr=head;
+   ListNode newTail=head;
     for(int i=1;i<length-k;i++){
-     curr=curr.next;
+     newTail=newTail.next;
     }
-    ListNode temp1=curr.next;
-    curr.next=null;
-    ListNode temp2=temp1;
-    while(temp1.next!=null){
-    temp1=temp1.next;
-    }
-    temp1.next=head;
-    head=temp2;
-    return head;
+    ListNode newHead=newTail.next;
+    newTail.next=null;
+    tail.next=head;
+    return newHead;
     }
 }
