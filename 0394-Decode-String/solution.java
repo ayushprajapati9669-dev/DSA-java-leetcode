@@ -27,6 +27,10 @@ class Solution {
                st.push(String.valueOf(ch));
             }
         }
-       return st.pop();
+       String ans="";
+       while(!st.isEmpty()){
+        ans=st.pop()+ans;
+       }
+       return ans;
     }
 }
