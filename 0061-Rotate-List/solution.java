@@ -13,7 +13,7 @@ class Solution {
         if(head==null ){
         return null;
         }
-        if(k==0){
+        if(k==0 || head.next==null){
             return head;
         }
     int length=0;
