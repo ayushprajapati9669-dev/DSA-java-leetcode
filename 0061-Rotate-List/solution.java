@@ -13,16 +13,18 @@ class Solution {
         if(head==null ){
         return null;
         }
-        if(k==0 || head.next==null){
-            return head;
-        }
-    int length=0;
+         int length=0;
     ListNode curr=head;
     while(curr!=null){
         curr=curr.next;
         length++;
     }
-    k=k%length;
+    
+        k=k%length;
+        if(k==0|| head.next==null){
+            return head;
+        }
+   
     curr=head;
     for(int i=1;i<length-k;i++){
      curr=curr.next;
