@@ -77,6 +77,6 @@ class Solution {
             Next.next=prev.next;
             prev.next=Next;
         }
-        return head;
+        return dummy.next;
     }
 }
